@@ -3,3 +3,13 @@
 
 en:
   hello: "Hello world"
+
+en:
+  activerecord:
+    attributes:
+      call:
+        caller_id: "Caller ID"
+        num_to_call: "Number to call"
+        text_to_say: "Text to say"
+        time_to_call: "Time to call"
+        voice_id: "Voice ID"

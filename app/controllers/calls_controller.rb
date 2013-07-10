@@ -34,8 +34,8 @@ class CallsController < ApplicationController
       if date_param['day'].length == 1
         date_param['day'] = "0#{date_param['day']}"
       end
-      date_format = "#{date_param['month']}/#{date_param['day']}/#{date_param['year']}"
-      time_format = "#{date_param['hour']}:#{date_param['minute']}"
-      return "#{date_format} - #{time_format}"
+      date_format = "#{date_param['month']}#{date_param['day']}#{date_param['year']}"
+      time_format = "#{date_param['hour']}#{date_param['minute']}"
+      return "#{date_format}#{time_format}"
     end
 end
