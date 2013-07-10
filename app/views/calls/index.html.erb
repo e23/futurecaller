@@ -6,7 +6,7 @@ timenow = time.strftime("%m/%d/%Y - %H:%M")
 %>
 
 <div class="table_area">
-    <%= @call.errors.full_messages.first if @call.errors.any? %>
+    <div class="error_message"><%= @call.errors.full_messages.first if @call.errors.any? %></div>
 
 	<%= form_for @call do |f| %>
 	<table>
