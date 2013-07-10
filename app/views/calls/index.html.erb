@@ -1,0 +1,12 @@
+<%= form_for @call do |f| %>
+
+	<%= f.text_field :num_to_call %>
+
+	<%= f.text_area :text_to_say %>
+
+	<%= f.text_field :caller_id %>
+
+	<%= select_datetime Date.today, prefix: :time_to_call %>
+
+	<%= f.submit "Submit" %>
+<% end %>

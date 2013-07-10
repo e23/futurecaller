@@ -1,4 +1,10 @@
 Futurecaller::Application.routes.draw do
+  resources :calls
+
+  root to: 'calls#index'
+
+  #match 'success' =>  'calls#success'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
