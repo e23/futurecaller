@@ -12,6 +12,7 @@
 
 .container {
 	margin: 0 auto;
+	margin-top: 200px;
 	max-width: 800px;
 }
 
@@ -22,7 +23,6 @@
 
 #call_text_to_say {
 	height: 35px;
-	max-width: 100%;
 }
 
 td {
@@ -32,4 +32,19 @@ td {
 
 .table_area {
 	text-align: center;
+}
+
+input {
+	width: 100%;
+}
+
+#sub_butt {
+	text-align: center;
+	margin: 15px 0;
+	input {
+		width: 200px;
+		font-weight: bold;
+		font-style: helvetica, sans serif;
+		font-size: 18px;
+	}
 }

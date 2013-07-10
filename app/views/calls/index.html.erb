@@ -1,18 +1,28 @@
-<%= form_for @call do |f| %>
-<table>
-	<tbody>	
-		<tr><td>Number To Call:</td><td><%= f.text_field :num_to_call %></td></tr>
+<%
+time = Time.new
 
-		<tr><td>Text To Say:</td><td><%= f.text_area :text_to_say %></td></tr>
+timenow = time.strftime("%m/%d/%Y - %H:%M")
 
-		<tr><td>Caller ID:</td><td><%= f.text_field :caller_id %></td></tr>
+%>
 
-		<tr><td>Time To call:</td><td><%= select_datetime Date.today, prefix: :time_to_call %></td></tr>
-	</tbody>
-</table>
+<div class="table_area">
+	<%= form_for @call do |f| %>
+	<table>
+		<tbody>	
+			<tr><td>Number To Call:</td><td><%= f.text_field :num_to_call %></td></tr>
 
-<br/>
+			<tr><td>Text To Say:</td><td><%= f.text_area :text_to_say %></td></tr>
 
-<%= f.submit "Submit" %>
+			<tr><td>Caller ID:</td><td><%= f.text_field :caller_id %></td></tr>
 
-<% end %>
+			<tr><td>Time To call:</td><td><%= select_datetime Time.now, prefix: :time_to_call %></td></tr>
+		</tbody>
+	</table>
+	<br/>
+	<span>The current date/time is (<%= timenow %>)</span>
+	<br/>
+
+	<div id="sub_butt"><%= f.submit "Submit" %></div>
+
+	<% end %>
+</div>
