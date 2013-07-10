@@ -1,12 +1,18 @@
 <%= form_for @call do |f| %>
+<table>
+	<tbody>	
+		<tr><td>Number To Call:</td><td><%= f.text_field :num_to_call %></td></tr>
 
-	<%= f.text_field :num_to_call %>
+		<tr><td>Text To Say:</td><td><%= f.text_area :text_to_say %></td></tr>
 
-	<%= f.text_area :text_to_say %>
+		<tr><td>Caller ID:</td><td><%= f.text_field :caller_id %></td></tr>
 
-	<%= f.text_field :caller_id %>
+		<tr><td>Time To call:</td><td><%= select_datetime Date.today, prefix: :time_to_call %></td></tr>
+	</tbody>
+</table>
 
-	<%= select_datetime Date.today, prefix: :time_to_call %>
+<br/>
 
-	<%= f.submit "Submit" %>
+<%= f.submit "Submit" %>
+
 <% end %>
