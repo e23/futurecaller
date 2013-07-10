@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  num_to_call: 1
+  text_to_say: MyText
+  caller_id: 1
+  voice_id: MyString
+  time_to_call: MyString
+
+two:
+  num_to_call: 1
+  text_to_say: MyText
+  caller_id: 1
+  voice_id: MyString
+  time_to_call: MyString
