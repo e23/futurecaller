@@ -29,6 +29,7 @@ class CallsController < ApplicationController
       flash[:error] = "Error deleting call"
     end
     
+    render 'admin'
   end
   def success
   	
