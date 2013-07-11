@@ -4,7 +4,7 @@ Futurecaller::Application.routes.draw do
   root to: 'calls#index'
 
   #match 'success' =>  'calls#success'
-
+  match 'admin' => 'calls#admin'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

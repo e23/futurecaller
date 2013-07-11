@@ -20,10 +20,23 @@ class CallsController < ApplicationController
   	end
   end
 
+  def destroy
+    @call = Call.find(params[:id])
+
+    if @call.destroy
+      flash[:success] = "You have deleted the call"
+    else
+      flash[:error] = "Error deleting call"
+    end
+    
+  end
   def success
   	
   end
 
+  def admin
+    @call = Call.paginate(per_page: 25, order: 'created_at', page: params[:page])
+  end
   private
 
     def setdateformat(thetime)

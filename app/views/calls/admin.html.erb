@@ -1,0 +1,18 @@
+<div class="admin">
+  <% @call.each do |call| %>
+	    <table>	
+	    	<tr>
+	    		<td>Number To Call</td>
+	    		<td>Time To Call</td>
+	    	</tr>
+
+	    	<tr>
+	    		<td><%= call.num_to_call %></td> 
+	    		<td><%= call.time_to_call %></td>
+	    		<td><%= link_to "delete", call, method: :delete, 
+	                						data: { confirm: "Are you sure?" } %></td>
+	        </tr>
+	    </table>
+		<%= will_paginate @call %>
+	<% end %>
+</div>
