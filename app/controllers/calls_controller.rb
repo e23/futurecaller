@@ -35,7 +35,7 @@ class CallsController < ApplicationController
   end
 
   def admin
-    @call = Call.paginate(per_page: 25, order: 'created_at', page: params[:page])
+    @call = Call.paginate(per_page: 25, page: params[:page])
   end
   private
 
